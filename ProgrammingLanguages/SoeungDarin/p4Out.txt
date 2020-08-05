@@ -1,0 +1,33 @@
+{'first': 'Mae',
+ 'last': 'Nard'}
+{'city': 'SAN ANTONIO',
+ 'first': 'Mae',
+ 'last': 'Nard',
+ 'petName': 'Pearl',
+ 'state': 'TX',
+ 'street': '123 COLORADO',
+ 'title': 'Dr.',
+ 'zip': '78255'}
+{'BULLET': 'o',
+ 'FLOW': 'YES',
+ 'JUST': 'LEFT',
+ 'LM': '5',
+ 'RM': '80'}
+{'BULLET': 'o',
+ 'FLOW': 'NO',
+ 'JUST': 'RIGHT',
+ 'LM': '5',
+ 'RM': '80'}
+{'BULLET': 'o',
+ 'FLOW': 'YES',
+ 'JUST': 'BULLET',
+ 'LM': '5',
+ 'RM': '70'}
+*** Not a recognizable command, found: @. SOME BAD STUFF
+*** Invalid format, found: BAD = LEFT
+*** Bad value for JUST found: FLOW
+{'BULLET': 'o',
+ 'FLOW': 'YES',
+ 'JUST': 'CENTER',
+ 'LM': '10',
+ 'RM': '60'}

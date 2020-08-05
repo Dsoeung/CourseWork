@@ -1,0 +1,19 @@
+1. List all of the people that you have collaborated with on this assignment. For each person indicate the level of collaboration (small, medium, large).
+Also write a few sentences describing what was discussed. Indicate whether you were mainly giving help or receiving help.
+   
+   I wrote this program with the help of my friend Jason, not present in this class but just a good upperclassman,
+   he helped me with driver2 cause I had trouble wrapping my head around it.
+   I researched a lot about small stuff to deal with moving characters around and character arrays.
+
+2. Do you think everything you did is correct? .....
+	Correct in functionality but in efficiency definitely not, initially when I tried to tackle the functions in part I, I overthought about 80% of it.
+	the drivers also were pretty hard for me to wrap my head around especially driver2.
+
+3. If not, give a brief description of what is working and what progress was made on the part that is not working.
+	All is working except if you go below -9999 on choosing all the integers and doubles cause I didn't know which
+	minimum value to take.
+
+4. Comments (e.g., what were the challenges, how to make this assignment more interesting etc.):
+	Specifically when finding and comparing the largest line/integer/double I didn't know what to set the initial value of the max.
+	I knew it had to be low however I could not default to 0 as negative numbers where possible in all except in lines.
+	I also don't know how to make the positive sign appear in numbers, although the negative sign shows no problems appearing.

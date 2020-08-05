@@ -1,0 +1,13 @@
+1. List all of the people that you have collaborated with on this assignment. For each person indicate the level of collaboration (small, medium, large). Also write a few sentences describing what was discussed. Indicate whether you were mainly giving help or receiving help.
+I worked on the majority of it alone, however I had help from an friend, Aldo. 
+Who refresh me on how fork works and the wait block, I'd say that's a small collaboration.
+
+2. Do you think everything you did is correct? .....
+In function I think so, however definitely not optimally, I'm still not used to forks, and
+I don't think I error checked it right.
+
+3. If not, give a brief description of what is working and what progress was made on the part that is not working.
+Everything, to my knowledge this time, is working as per instruction.
+
+4. Comments (e.g., what were the challenges, how to make this assignment more interesting etc.):
+Again I'm still not as used to forks as I want to be I got help on this program so that would be the challenge for me.

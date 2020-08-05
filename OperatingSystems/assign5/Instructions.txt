@@ -1,0 +1,2 @@
+fox03:~/Opsys/assign5> gcc -o assign5 assign5.c -lpthread
+fox03:~/Opsys/assign5> ./assign5 -alg FIFO -input input1.txt

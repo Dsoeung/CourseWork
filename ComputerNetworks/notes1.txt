@@ -1,0 +1,26 @@
+Slide 100, chapter 3
+
+1 - (total recieved/total sent)
+
+Computing RTT 
+
+
+does loss affect RTT calc? No
+
+RTT computed from recieve size.
+RTT measured in milliseconds.
+
+HW6: only client program
+
+ Is the average RTT a good measure in itself or would some other statistical quantity make it easier to
+interpret?
+avg RTT may take some random paths.
+
+ Does the RTT say anything about the One-way Trip times (OWTT)?
+ Can you think of key network parameter you could estimate by measuring the change in the temporal
+spacing between the sent segments and the received segments?
+ What happens if you send datagrams as fast as possible? Can you create loss even using the lossless
+server? How should you modify your code in this situation? (see suggested control flow below)
+
+midterm over ch3
+udp tcp

@@ -1,0 +1,46 @@
+1. List all of the people that you have collaborated with on this assignment. For each person indicate the level of collaboration (small, medium, large). 
+   Also write a few sentences describing what was discussed. Indicate whether you were mainly giving help or receiving help.
+I mainly used the ouline given to us from the assignment page, I collaborated with an upper classman Jason, but it was a medium level of collaboration, 
+I needed to remember a lot on Java and he gave me much needed help.
+	
+
+2. Do you think everything you did is correct? .....
+No!
+
+3. If not, give a brief description of what is working and what progress was made on the part that is not working.
+I have not worked with java in a long time, I did a lot of research and spent most of my time on the java portion.
+
+4. Comments (e.g., what were the challenges, how to make this assignment more interesting etc.):
+Didn't really know what to look out for feels like a while since ive worked with threads and java I don't know why, but maybe this quarantine is getting to me.
+But I worked on it in Eclipse and it really looks out for you in errors and what not such as try catches.
+
+
+5. Program output: (if you print anything on the screen, then copy/paste it here. don't copy/paste output files here
+fox03:~/Opsys/assign4> gcc -o assign4 assign4.c -pthread
+fox03:~/Opsys/assign4> ./assign4 1000
+Sorting is done in 0.243000 ms when two threads are used
+Sorting is done in 1.382000 ms when one thread is used
+fox03:~/Opsys/assign4> ./assign4 5000
+Sorting is done in 13.379000 ms when two threads are used
+Sorting is done in 64.228996 ms when one thread is used
+fox03:~/Opsys/assign4> ./assign4 10000
+Sorting is done in 68.848000 ms when two threads are used
+Sorting is done in 259.756012 ms when one thread is used
+fox03:~/Opsys/assign4> ./assign4 20000
+Sorting is done in 293.091003 ms when two threads are used
+Sorting is done in 1079.256104 ms when one thread is used
+
+~Java, I ran this in Eclipse~
+
+1000
+Sorting is done in 2.3182ms when two threads are used
+Sorting is done in 1.449ms when one thread is used
+5000
+Sorting is done in 7.1135ms when two threads are used
+Sorting is done in 4.2209ms when one thread is used
+10000
+Sorting is done in 10.8518ms when two threads are used
+Sorting is done in 14.3651ms when one thread is used
+20000
+Sorting is done in 21.9162ms when two threads are used
+Sorting is done in 55.8305ms when one thread is used

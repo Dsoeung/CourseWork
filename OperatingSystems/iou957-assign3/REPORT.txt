@@ -1,0 +1,18 @@
+(1) List all of the people that you have collaborated with on this assignment. For each person indicate the level of collaboration (small, medium, large). 
+	Also write a few sentences describing what was discussed. Indicate whether you were mainly giving help or receiving help.
+I mainly got a lot of help from the assignment help video from Prof.Korkmaz.
+
+(2) Do you think everything you did is correct? .....
+I don't know what my part 1 was specifically suppose to print out, I just printed the PA if anything.
+
+(3) If not, give a brief description of what is working and what progress was made on the part that is not working.
+
+
+(4) Comments (e.g., what were the challenges, how to make this assignment more interesting etc.)
+I didn't really have a lot of time it's been very busy and hectic personally, although this assignment was easy cause of the videos and I really appreciate that.
+
+(5) Program output: (if you print anything on the screen, then copy/paste it here. don't copy/paste output files here)
+fox03:~/Opsys/assign3> md5sum part1-output
+ceabc02825a5b908e474b053074ab53c  part1-output
+fox03:~/Opsys/assign3> md5sum part2-output
+c95b27848ae8d4354d87678d075001f7  part2-output

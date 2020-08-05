@@ -1,0 +1,9 @@
+if (i'm the parent) {
+  close(the read end of the pipe)
+  do your logic
+  when you want to send information, call write() (or one of it's many wrapper functions) on the write end
+} else {  //i'm the child
+   close(the write end of the pipe);
+   do your logic
+   any time you want to receive information, call read() on the read end
+}

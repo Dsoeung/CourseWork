@@ -1,0 +1,5 @@
+This assignment is about process Process Creation and File Operations.
+You will write a program (says wordcount.c) to find out the number of words in multiple text files. 
+Specifically, the program will first determine the number of files to be processed. 
+Then, the program will create multiple processes with each process being responsible for one file to count its words.
+The typical format to run the program with input parameters is as follows:

@@ -1,0 +1,171 @@
+;;;; p3Lisp
+
+;;;; to do list
+;;;; (checkSentence parse)
+;;;; (resetPartsOfSpeech parse partOfSpeech1 partOfSpeech2 ...) 
+;;;; (set_isa partOfSpeech word1 word2 …)
+;;;; (isa word partOfSpeech)
+
+;;; set_isa
+;;;			Parameters:		
+;;;				partOfSpeech  - Type of speech, key to hashtable.
+;;;				wordList      - Assigned list of words given, value to hashtable.
+;;;			Purpose:
+;;;				This macro defines each word in the list of words to the 
+;;;				specified partOfSpeech in the dictionary (hard code word-dict).   
+;;;         Notes :
+;;;             - Pretty much used the print each function example from notes.
+(defmacro set_isa (partOfSpeech &rest wordList)
+    (do ( (crWord wordList (CDR crWord)) )
+        ( (NULL crWord) T )
+        ( putp (CAR crWord) word-dict partOfSpeech )
+    )
+)
+
+;;; isa
+;;;			Parameters:
+;;;				word			- Word to be searched for in word-dict.
+;;;				partOfSpeech	- Type of speech, key to hashtable.
+;;;			Purpose:
+;;;				Returns true if word is found in speechPart.
+;;;				Returns nil otherwise.
+;;;			Notes: 
+;;;				N/A
+;;;
+
+(defun isa (word partOfSpeech)
+	( eql partOfSpeech (getp word word-dict) )
+)
+
+;;; resetPartsOfSpeech
+;;;			Parameters:
+;;;				parse			- The parse object containing a sentence, cursor position, and
+;;;               					value for each part of speech
+;;;				partOfSpeech	- Other named/given parts of speech.
+;;;			Purpose:
+;;;				This function resets the value for each of the specified parts of speech to NIL using putp.  
+;;;				The first argument is a parse-obj.  There are a VARIABLE number of parts of speech passed to resetPartsOfSpeech.
+;;;
+
+(defun resetPartsOfSpeech (parse &rest partOfSpeech)
+	(dolist (item partOfSpeech)
+		(putp item parse NIL)
+	)
+)
+;;; checkNP
+;;;			Parameter:
+;;;				parse			- The parse object containing a sentence, cursor position, and
+;;;               					value for each part of speech
+;;;				partOfSpeech	- Type of speech, key to hashtable.
+;;;   		Purpose:
+;;;				Checks what type of speech the given word is passed through parse. 
+;;;         Notes: 
+;;;             uses getToken to get tokens.  
+;;;             (resetPartsOfSpeech parse-obj 'verb 'directObj 'prep 'indirectObj 'subject )
+;;;
+
+
+(defun checkNP (parse partOfSpeech)
+	(prog ()
+		(setf article (getToken parse))
+		(if (isa article 'article)
+			(setf noun (getToken parse))
+			(setf noun article)
+		)
+		;(setf adjective (getToken parse))
+		;(if (and (isa adjective 'adjective)
+		;    ( not (isa article 'article)) )
+		;	(setf noun (getToken parse))
+		;	(setf noun adjective)
+	    ;)
+		;;Check for noun
+		(if (not (isa noun 'noun))
+		    (return NIL))
+		;;record that noun is the subject
+		(if (isa article 'noun) 
+		    ( putp partOfSpeech parse (LIST noun) ))
+		;;however subject may have optional article/adjective
+		(if (isa article 'adjective) 
+		    ( putp partOfSpeech parse (LIST article noun) ))
+		(if (isa article 'article) 
+		    ( putp partOfSpeech parse (LIST article noun) ))
+		(return T)
+	)
+)
+
+;;; checkSentence
+;;;			Parameters:
+;;;				parse			- The parse object containing a sentence, cursor position, and
+;;;               					value for each part of speech
+;;;			Purpose:
+;;;				This function checks for a valid sentence according to the grammar given.
+;;;				Assume it is passed a parse-obj (which has already been populated with a sentence) 
+;;;             and returns T if the sentence is valid; otherwise, it returns NIL.
+;;;
+;;;         Notes:
+;;;             Name the parameter parse to avoid conflicts.  
+;;;             checkSentence saves the identified parts of speech (e.g., (putp 'verb parse (list verb))).
+;;;             Will be likely we need to back up during parsing. (saveCursor and setCursor)
+;;;             (resetPartsOfSpeech parse-obj 'verb 'directObj 'prep 'indirectObj 'subject )
+;;;
+
+(defun checkSentence (parse)
+	(prog ()
+		(checkNP parse 'subject)
+		(setf verb (getToken parse))
+		(if (not (isa verb 'verb))
+			(return NIL)
+			;; save verb
+			(putp 'verb parse (list verb))
+		)
+		(setf saveCursor (getCursor parse))
+		    ;;check directObj
+		(if (not (checkNP parse 'directObj)) 
+		    ;;if not reset cursor
+		    ( setCursor parse saveCursor) )
+		(setf prep (getToken parse))
+		(if (isa prep 'prep) 
+		    ;;save prep
+		    ( putp 'prep parse (list prep)) )	
+		(if (and (isa prep 'prep)
+		    ( not (checkNP parse 'indirectObj)) )
+		    (return NIL))
+		(return T)
+	)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

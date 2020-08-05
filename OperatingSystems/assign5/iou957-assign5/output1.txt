@@ -1,0 +1,9 @@
+-------------------------------------------------------------------
+Student Name: Darin Soeung
+Input File Name				: input1.txt
+CPU Scheduling Alg			: FIFO
+CPU utilization				: 72.38%
+Throughput				: 0.017 jobs per ms
+Average Turnaround time			: 312.00 ms
+Average Waiting time in R queue		: 22.31 ms
+-------------------------------------------------------------------

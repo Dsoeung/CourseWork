@@ -1,0 +1,15 @@
+fox03:~/Opsys/finalExamQuestion> ./client fox03 1532
+Client is waiting for CTRL-C. 
+^CCTRL-C was pressed! 
+Sentence   :   
+GETGPA iou957
+Modified to -> Darin 4.000000
+fox03:~/Opsys/finalExamQuestion> ./client fox03 1533
+Client is waiting for CTRL-C. 
+STOP
+Modified to -> 
+fox03:~/Opsys/finalExamQuestion> ./client fox03 1534
+Client is waiting for CTRL-C. 
+GETGPA xaq314
+Modified to -> Student information not found!
+fox03:~/Opsys/finalExamQuestion> 

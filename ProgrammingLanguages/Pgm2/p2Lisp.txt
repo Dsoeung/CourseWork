@@ -1,0 +1,164 @@
+;constructs a new list by inserting the specified insValue
+;into the list AFTER the Nth top-level value 
+(defun insertNth (list n insValue)
+  (cond
+    ((NULL list) NIL)
+    ((< 0 n) (CONS (CAR list) (insertNth (CDR list) (1- n) insValue)))
+    ((CONS insValue list))
+  )
+)
+
+(NULL X)
+return TRUE if X is NULL
+
+;which is passed a list and returns a reversed list of the high-level entries.
+;Hint:  APPEND could be useful.
+(defun reverseTop (L) 
+(cond 
+	((NULL L) NIL) 
+    (T (append (reverseTop (CDR L)) (list (CAR L))))
+    )
+)
+
+			;append list1 list2
+			;MUST BE LISTS
+			;(list expr1 expr2) - returns a new list with the value of expr1 followed by the value of expr2. 
+;reverseAll, which is passed a list and returns a reversed list at all levels.  
+(defun reverseAll (L)
+    (cond (  (ATOM L) L)
+          (T (append (reverseAll(CDR L)) (list (reverseAll(CAR L)))) )
+    )
+)
+
+;Removes ALL NIL at top level
+(defun removeNILTop (L) 
+(cond 
+	((NULL L) NIL)
+    ((not (NULL (CAR L))) (CONS (CAR L) (removeNILTop (CDR L))))
+    (T (append (CAR L) (removeNILTop (CDR L))))
+    )
+)
+
+;Remove NILMost
+;which is passed a list and removes NIL at any level
+;Note: if the result of removing NIL gives a NIL
+;it is unnecessary to remove that resulting NIL.  
+(defun removeNILMost (L)
+	( COND	
+			( (NULL  L)	NIL )
+			( (NULL (CAR L)) (removeNILMost (CDR L)) )
+			( (ATOM (CAR L)) (CONS (CAR L) (removeNILMost (CDR L))) )
+			( T  (CONS (removeNILMost (CAR L)) (removeNILMost (CDR L))) )	
+	)
+)
+
+;palindrome
+;which is passed a list and returns T if the list is a palindrome
+;otherwise, it returns NIL. It only needs to be a palindrome at the top-level.
+(defun palindrome (L)
+    (cond
+        ( (NULL L) NIL)
+             (T (EQUAL L (reverseAll L)))
+    )
+)
+
+;evalEach
+;which evaluates each item in the lis using the built-in EVAL function
+;Its functional value is the value of the last expression evaluated.
+(defun evalEach (lis)
+    (cond ((NULL lis) NIL)
+        ((NULL (CDR lis)) (EVAL (CAR lis)))
+        (T (EVAL (CAR lis)) (evalEach (CDR lis)))
+    )
+)
+
+
+  
+  
+  ;;final
+;finds if atom atm is part of the list L
+	(defun MEMSET (atm L)
+		(cond ( (NULL L) NIL )
+			( (EQL atm (CAR L)) T )
+			( T (MEMSET atm (CDR L)) ) 
+		)
+	)
+	
+;Lists all atoms from set1 and set2 in a single list
+; however the combined list has no repeat values
+(defun SETUNION (set1 set2)
+	(cond 
+		;if set 1 is null return set 2 since that's all the common atoms
+		( (NULL set1) set2 )
+		;if car set1 is in set2 then remove car of set 1 
+		( (memset (CAR set1) set2) (SETUNION (CDR set1) set2))
+		;default cons car of set1 to the overall recursive list and keep parsing til NULL ^
+		( T (CONS (CAR set1) (SETUNION (CDR set1) set2)))
+	)
+)
+
+
+; EXACT opposite of set union kind of, returns the different atoms of the two lists.
+  (defun SETDIFF (set1 set2)
+    (cond 
+		;if set1 is null return null
+		( (null set1) () )
+		;if car of set1 is in set2 then delete it
+		( (memset (car set1) set2) (setdiff (cdr set1) set2))	;;when you find the case you'll also probably have to iterate
+		;default cons the car of set1 to overall and parse
+		( T (cons (car set1) (setdiff (cdr set1) set2)) )	;; T will probably have to always iterate
+	)
+  )
+
+(defun SETINTER (set1 set2)
+      (cond ( (NULL set1) NIL )
+            ( (memset (CAR set1) set2)
+                (CONS (CAR set1) (SETINTER(CDR set1) set2))
+            )
+            (T (SETINTER (CDR set1) set2))
+		)
+)
+
+
+;(cons expr list) - returns a new list with its car being expr and its cdr being list. (1 append)
+(defun replaceIn (L possibleList repValue)
+	(cond 
+		( (NULL L) () )
+		;if match
+		(( memset (car L) possibleList) (cons repValue (replaceIn (cdr L) possibleList repValue)))
+		;cons (add to beginning) repValue onto cdr L
+		;if not
+		( T (cons (car L) (replaceIn (cdr L) possibleList repValue)) )
+		;cons car L back to cdr and iterate L through recursion
+	)
+)
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

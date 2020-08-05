@@ -1,0 +1,19 @@
+#awk test script
+
+$1 == "ssilvestro"{
+connectTime += "$3 - $2"
+totalBandwidth += "$4+$5"
+}
+
+ $1 == "*storage*" && $2 == "ssilvestro"{
+	if($3 > maxStorage)
+		maxStorage = $3
+}
+
+END {
+	print("ssilvestro")
+	print("Connect Time = ", connectTime)
+	print("Bandwidth = ", totalBandwidth)
+	print("Storage = ", maxStorage)
+
+}

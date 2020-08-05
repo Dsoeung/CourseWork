@@ -1,0 +1,109 @@
+
+Initial Books
+   Book Id   Title                                    Customer Ck Out Dt  Late Fee Max Late  
+
+CUSTOMER BEGIN 111111 0.75 petem@xyz.net Pete Moss
+CUSTOMER ADDRESS 123 Boggy Lane,New Orleans,LA,70112
+
+**********************Library Reciept**********************
+111111 LA Pete Previously Owed: 0.75 
+123 Boggy Lane New Orleans LA ,70112
+					Trans  Book       Date      
+CUSTOMER TRANS C JOYPGM001 2016-01-25
+					 C JOYPGM001 2016-01-25	Book not Found
+CUSTOMER TRANS C TECHDR001 2016-01-25 
+					 C TECHDR001 2016-01-25	Book not Found
+CUSTOMER TRANS R PYTHON001 2016-01-25      
+					 R PYTHON001 2016-01-25	Book not Found
+CUSTOMER COMPLETE
+							 Customer's Total Fees: $0.75
+CUSTOMER BEGIN 222222 0.00 pcorn@abc.net Pop Corn
+CUSTOMER ADDRESS 456 Kernel,San Antonio,TX,78210
+
+**********************Library Reciept**********************
+222222 TX Pop Previously Owed: 0.00 
+456 Kernel San Antonio TX ,78210
+					Trans  Book       Date      
+CUSTOMER TRANS C TECHDR001 2016-01-25 
+					 C TECHDR001 2016-01-25	Book not Found
+CUSTOMER TRANS C TECHDR002 2016-01-25
+					 C TECHDR002 2016-01-25	Book not Found
+CUSTOMER TRANS C JOYPGM004 2016-01-25      
+					 C JOYPGM004 2016-01-25	Book not Found
+CUSTOMER COMPLETE
+							 Customer's Total Fees: $0.00
+CUSTOMER BEGIN 333333 44.00 pennyl@xyz.net Penny Loafer
+CUSTOMER ADDRESS 789 Walking St,Philadelphia,PA,19102
+
+**********************Library Reciept**********************
+333333 PA Penny Previously Owed: 44.00 
+789 Walking St Philadelphia PA ,19102
+					Trans  Book       Date      
+CUSTOMER TRANS R LINUXX004 2016-01-25
+					 R LINUXX004 2016-01-25	Book not Found
+CUSTOMER TRANS C PERLLL001 2016-01-25
+					 C PERLLL001 2016-01-25	Book not Found
+CUSTOMER TRANS R ARTINT001 2016-01-25
+					 R ARTINT001 2016-01-25	Book not Found
+CUSTOMER COMPLETE
+							 Customer's Total Fees: $44.00
+CUSTOMER BEGIN 444444 1.25 hgilmore@xyz.net Adam Sandler
+CUSTOMER ADDRESS 444 Golf View,Hollywood,CA,92274
+
+**********************Library Reciept**********************
+444444 CA Adam Previously Owed: 1.25 
+444 Golf View Hollywood CA ,92274
+					Trans  Book       Date      
+CUSTOMER TRANS R EXCELL001 2016-01-25
+					 R EXCELL001 2016-01-25	Book not Found
+CUSTOMER COMPLETE
+							 Customer's Total Fees: $1.25
+CUSTOMER BEGIN 555555 0.00 butter@xyz.net Melba Toast
+CUSTOMER ADDRESS 222 Cracker Blvd,San Antonio,TX,78222
+
+**********************Library Reciept**********************
+555555 TX Melba Previously Owed: 0.00 
+222 Cracker Blvd San Antonio TX ,78222
+					Trans  Book       Date      
+CUSTOMER TRANS R SQLDBB001 2016-02-29
+					 R SQLDBB001 2016-02-29	Book not Found
+CUSTOMER TRANS C LINUXX004 2016-02-29  
+					 C LINUXX004 2016-02-29	Book not Found
+CUSTOMER COMPLETE
+							 Customer's Total Fees: $0.00
+CUSTOMER BEGIN 666666 5.55 joeK@xyz.net Joe King
+CUSTOMER ADDRESS 456 Laughing Way,Zigzag,OR,97049
+
+**********************Library Reciept**********************
+666666 OR Joe Previously Owed: 5.55 
+456 Laughing Way Zigzag OR ,97049
+					Trans  Book       Date      
+CUSTOMER TRANS C JOYPGM003 2016-03-01
+					 C JOYPGM003 2016-03-01	Book not Found
+CUSTOMER TRANS C PRANKS001 2016-03-01
+					 C PRANKS001 2016-03-01	Book not Found
+CUSTOMER COMPLETE
+							 Customer's Total Fees: $5.55
+BOOK CHANGE XXXXXX001 0.25 50.00
+BOOK SHOW XXXXXX001 
+BOOK CHANGE JAVADD001 0.25 50.00
+BOOK SHOW JAVADD001 
+BOOK NEW SQLDBB001 NONE 0000-00-00 0.30 60.00 Making Your DB Queries SQueeL
+BOOK NEW SQLDBB002 NONE 0000-00-00 0.30 60.00 Making Your DB Queries SQueeL
+CUSTOMER BEGIN 777777 7.50 rockBoat@xyz.net Rock D Boat
+CUSTOMER ADDRESS 765 Ocean Blvd,Corpus Christi,TX,78412
+
+**********************Library Reciept**********************
+777777 TX Rock Previously Owed: 7.50 
+765 Ocean Blvd Corpus Christi TX ,78412
+					Trans  Book       Date      
+CUSTOMER TRANS R JAVADD001 2016-03-01
+					 R JAVADD001 2016-03-01	Book not Found
+CUSTOMER TRANS C PRANKS001 2016-03-01
+					 C PRANKS001 2016-03-01	Book not Found
+CUSTOMER COMPLETE
+							 Customer's Total Fees: $7.50
+
+Resulting Books
+   Book Id   Title                                    Customer Ck Out Dt  Late Fee Max Late  
+

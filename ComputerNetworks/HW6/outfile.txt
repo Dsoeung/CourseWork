@@ -1,0 +1,16 @@
+Enter amount of messages you want to send: Packet recieved
+Server msg [ 1.58536e+12 ]
+Packet recieved
+Server msg [ 1.58536e+12 ]
+Packet recieved
+Server msg [ 1.58536e+12 ]
+Packet recieved
+Server msg [ 1.58536e+12 ]
+Packet recieved
+Server msg [ 1.58536e+12 ]
+Packet recieved
+Server msg [ 1.58536e+12 ]
+Packet recieved
+Server msg [ 1.58536e+12 ]
+Percent Loss = 0.000000%
+Average RTT: 47.71ms

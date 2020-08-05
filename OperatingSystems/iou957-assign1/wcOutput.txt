@@ -1,0 +1,4 @@
+Child process for test1.txt: Number of words is 75
+Child process for test2.txt: Number of words is 94
+Child process for test3.txt: Number of words is 6
+All 3 files have been counted!

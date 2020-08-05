@@ -1,0 +1,21 @@
+fox03:~/Opsys/finalExamQuestion> ./server 1532
+
+Server: Starting accept
+Server: Starting accept
+Selected GETGPA : 
+
+Student foundClosing server connection
+^C
+fox03:~/Opsys/finalExamQuestion> ./server 1533
+
+Server: Starting accept
+Closing server connection
+Server: Starting accept^C
+fox03:~/Opsys/finalExamQuestion> ./server 1534
+
+Server: Starting accept
+Server: Starting accept
+Selected GETGPA : 
+
+Student not found!Closing server connection
+^C

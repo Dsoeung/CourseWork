@@ -1,0 +1,40 @@
+Student Name : Darin Soeung
+Scheduling Algorithm : FIFO
+
+Input File Name : input1.txt
+Process 1 is completed at 5 ms
+Process 2 is completed at 12 ms
+Process 3 is completed at 18 ms
+Process 4 is completed at 22 ms
+
+Average Waiting Time: 8.75 per ms	(35 / 4)
+Average Turnaround Time: 14.25 per ms	(57 / 4)
+Throughput: 0.18 per ms			(4 / 22)
+
+Student Name : Darin Soeung
+Scheduling Algorithm : SJF
+
+Input File Name : input1.txt
+Process 4 is completed at 4 ms
+Process 1 is completed at 9 ms
+Process 3 is completed at 15 ms
+Process 2 is completed at 22 ms
+
+
+Average Waiting Time: 7.00 per ms	(28 / 4)
+Average Turnaround Time: 12.50 per ms	(50 / 4)
+Throughput: 0.18 per ms			(4 / 22)
+
+Student Name : Darin Soeung
+Scheduling Algorithm : SJF
+
+Input File Name : input1.txt
+Process 4 is completed at 4 ms
+Process 1 is completed at 9 ms
+Process 3 is completed at 15 ms
+Process 2 is completed at 22 ms
+
+
+Average Waiting Time: 7.00 per ms	(28 / 4)
+Average Turnaround Time: 12.50 per ms	(50 / 4)
+Throughput: 0.18 per ms			(4 / 22)

@@ -1,0 +1,280 @@
+fox03:~/ProgL/Pgm3> clisp
+  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.49 (2010-07-07) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2010
+
+Type :h and hit Enter for context help.
+
+[1]> (load "p3LispDef.txt")
+;; Loading file p3LispDef.txt ...
+;; Loaded file p3LispDef.txt
+T
+[2]> (load "p3Lisp.txt")
+;; Loading file p3Lisp.txt ...
+;; Loaded file p3Lisp.txt
+T
+[3]> (load "p3LispRun.txt")
+;; Loading file p3LispRun.txt ...
+ ******************************************************************
+  (THE BOY PET THE DOG)
+    checkSentence returned T
+    subject= (THE BOY)
+    verb= (PET)
+    directObj= (THE DOG)
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE DOG RAN HOME)
+    checkSentence returned T
+    subject= (THE DOG)
+    verb= (RAN)
+    directObj= (HOME)
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (MICKEY ATE A BANANA)
+    checkSentence returned T
+    subject= (MICKEY)
+    verb= (ATE)
+    directObj= (A BANANA)
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE BOY THREW THE BALL TO THE DOG)
+    checkSentence returned T
+    subject= (THE BOY)
+    verb= (THREW)
+    directObj= (THE BALL)
+    prep= (TO)
+    indirectObj= (THE DOG)
+ ******************************************************************
+  (THE DOG SAT ON THE BOY)
+    checkSentence returned T
+    subject= (THE DOG)
+    verb= (SAT)
+    directObj= NIL
+    prep= (ON)
+    indirectObj= (THE BOY)
+ ******************************************************************
+  (LARRY TAUGHT BRILLIANT STUDENTS)
+    checkSentence returned T
+    subject= (LARRY)
+    verb= (TAUGHT)
+    directObj= (BRILLIANT STUDENTS)
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (MICKEY ATE A LARGE BOWL OF RANCID CHEESE)
+    checkSentence returned T
+    subject= (MICKEY)
+    verb= (ATE)
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE SMELLY DOG LICKED THE HAPPY BOY)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE STRANGE BOY THREW A RIPE BANANA AT THE SCARED GIRL)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE BOY SAT ON THE)
+    checkSentence returned NIL
+    subject= (THE BOY)
+    verb= (SAT)
+    directObj= NIL
+    prep= (ON)
+    indirectObj= NIL
+ ******************************************************************
+  (THREW THE BALL AT MICKEY)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (DOG THE SAT ON THE BOY)
+    checkSentence returned NIL
+    subject= (DOG)
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (MICKEY THREW THE SAT)
+    checkSentence returned T
+    subject= (MICKEY)
+    verb= (THREW)
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (LARRY TAUGHT BRILLIANT)
+    checkSentence returned T
+    subject= (LARRY)
+    verb= (TAUGHT)
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (LARRY TAUGHT STUDENTS BRILLIANT)
+    checkSentence returned T
+    subject= (LARRY)
+    verb= (TAUGHT)
+    directObj= (STUDENTS)
+    prep= NIL
+    indirectObj= NIL
+[4]> (load "p3LispDef.txt")
+;; Loading file p3LispDef.txt ...
+;; Loaded file p3LispDef.txt
+T
+[5]> (load "p3Lisp.txt")
+;; Loading file p3Lisp.txt ...
+;; Loaded file p3Lisp.txt
+T
+[6]> (load "p3LispRun.txt")
+;; Loading file p3LispRun.txt ...
+ ******************************************************************
+  (THE BOY PET THE DOG)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE DOG RAN HOME)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (MICKEY ATE A BANANA)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE BOY THREW THE BALL TO THE DOG)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE DOG SAT ON THE BOY)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (LARRY TAUGHT BRILLIANT STUDENTS)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (MICKEY ATE A LARGE BOWL OF RANCID CHEESE)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE SMELLY DOG LICKED THE HAPPY BOY)
+    checkSentence returned T
+    subject= (THE DOG)
+    verb= (LICKED)
+    directObj= (THE BOY)
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THE STRANGE BOY THREW A RIPE BANANA AT THE SCARED GIRL)
+    checkSentence returned T
+    subject= (THE BOY)
+    verb= (THREW)
+    directObj= (A BANANA)
+    prep= (AT)
+    indirectObj= (THE GIRL)
+ ******************************************************************
+  (THE BOY SAT ON THE)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (THREW THE BALL AT MICKEY)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (DOG THE SAT ON THE BOY)
+    checkSentence returned NIL
+    subject= NIL
+    verb= (SAT)
+    directObj= NIL
+    prep= (ON)
+    indirectObj= NIL
+ ******************************************************************
+  (MICKEY THREW THE SAT)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (LARRY TAUGHT BRILLIANT)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+ ******************************************************************
+  (LARRY TAUGHT STUDENTS BRILLIANT)
+    checkSentence returned NIL
+    subject= NIL
+    verb= NIL
+    directObj= NIL
+    prep= NIL
+    indirectObj= NIL
+[7]> 

@@ -1,0 +1,13 @@
+1. List all of the people that you have collaborated with on this assignment. For each person indicate the level of collaboration (small, medium, large). Also write a few sentences describing what was discussed. Indicate whether you were mainly giving help or receiving help.
+I worked a lot initially in the computer lab, talking to class mates and random people working on it aswell. I'd say a medium amount of collaboration
+came from this. I was mainly recieving help, not much of a talker, we discussed SJF and PR since they are very similar and would be a big part of the assignment.
+
+2. Do you think everything you did is correct? .....
+No I didn't finish the Round Robin function and I feel like I could have optimized a lot of the program.
+
+3. If not, give a brief description of what is working and what progress was made on the part that is not working.
+The RR function was really confusing as well as I ran out of time for it.
+
+4. Comments (e.g., what were the challenges, how to make this assignment more interesting etc.):
+The assignment was interesting, I definitely just managed my time poorly, I did the first couple functions,
+then sat on the assignment and when I came back to it I forgot a lot and ran out of time.

@@ -1,0 +1,27 @@
+^[[Afox03:~/Opsys/assign0> ./driver1 3 3 3 driver1.out
+Input a sequence of integers : 12D
+ERROR invalid sequence of characters : 12D 
+Input a sequence of integers : 
+Input a sequence of integers : 124
+124
+Input a sequence of integers : -213
+-213
+Input a sequence of integers : 356
+356
+Input a double : 21.4
+21.400000
+Input a double : 13.e2
+ERROR: INVALID INPUT : 
+Input a double : -13    
+-13.000000
+Input a double : 256.333333  
+256.333333
+Enter a line of characters : This is long.    
+This is long.
+Enter a line of characters : This is longer.
+This is longer.
+Enter a line of characters : This is the longest.
+This is the longest.
+Largest int : 356 
+Largest double : 256.333333 
+Longest Line : This is the longest. 

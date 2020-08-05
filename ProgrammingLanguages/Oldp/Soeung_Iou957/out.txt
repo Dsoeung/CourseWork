@@ -1,0 +1,9 @@
+** Field = a class java.lang.Integer
+** Field = b class java.lang.Double
+** Field = c class java.lang.Integer
+** Field = d class java.lang.Double
+** Field = m class java.lang.String
+** Field = n class java.lang.String
+[1, 200.0, 3, 400.0, a, xy]
+[10, 210.0, 30, 410.0, aa, xyxy]
+[100, 220.0, 300, 420.0, aaaa, xyxyxyxy]

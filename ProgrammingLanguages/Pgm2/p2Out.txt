@@ -1,0 +1,179 @@
+fox03:~/ProgL/lisp> clisp
+  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.49 (2010-07-07) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2010
+
+Type :h and hit Enter for context help.
+
+[1]> (load "p2Lisp.txt" :echo T :print T)
+;; Loading file p2Lisp.txt ...
+;constructs a new list by inserting the specified insValue
+;into the list AFTER the Nth top-level value 
+(defun insertNth (list n insValue)
+  (cond
+    ((NULL list) NIL)
+    ((< 0 n) (CONS (CAR list) (insertNth (CDR list) (1- n) insValue)))
+    ((CONS insValue list))
+  )
+)
+INSERTNTH
+
+
+;which is passed a list and returns a reversed list of the high-level entries.
+;Hint:  APPEND could be useful.
+(defun reverseTop (L) 
+(cond ((NULL L) NIL) 
+    (T (append (reverseTop (CDR L)) (list (CAR L))))
+    )
+)
+REVERSETOP
+
+
+;reverseAll, which is passed a list and returns a reversed list at all levels.  
+(defun reverseAll (L)
+    (cond (  (ATOM L) L)
+          (T (append (reverseAll(CDR L)) (list (reverseAll(CAR L)))) )
+    )
+)
+REVERSEALL
+
+
+;Removes ALL NIL at top level
+(defun removeNILTop (L) 
+(cond ((NULL L) NIL)
+    ((not (NULL (CAR L))) (CONS (CAR L) (removeNILTop (CDR L))))
+    (T (append (CAR L) (removeNILTop (CDR L))))
+    )
+)
+REMOVENILTOP
+
+
+;Remove NILMost
+;which is passed a list and removes NIL at any level
+;Note: if the result of removing NIL gives a NIL
+;it is unnecessary to remove that resulting NIL.  
+(defun removeNILMost (L)
+        ( COND  ( (NULL  L)     NIL )
+                        ( (NULL (CAR L)) (removeNILMost (CDR L)) )
+                        ( (ATOM (CAR L)) (CONS (CAR L) (removeNILMost (CDR L))) )
+                        ( T  (CONS (removeNILMost (CAR L)) (removeNILMost (CDR L))) )
+        )
+)
+REMOVENILMOST
+
+
+;palindrome
+;which is passed a list and returns T if the list is a palindrome
+;otherwise, it returns NIL. It only needs to be a palindrome at the top-level.
+(defun palindrome (L)
+    (cond
+        ( (NULL L) NIL)
+             (T (EQUAL L (reverseAll L)))
+    )
+)
+PALINDROME
+
+
+;evalEach
+;which evaluates each item in the lis using the built-in EVAL function
+;Its functional value is the value of the last expression evaluated.
+(defun evalEach (lis)
+    (cond ((NULL lis) NIL)
+        ((NULL (CDR lis)) (EVAL (CAR lis)))
+        (T (EVAL (CAR lis)) (evalEach (CDR lis)))
+    )
+)
+EVALEACH
+
+
+
+;; Loaded file p2Lisp.txt
+T
+[2]> (load "p2LispRun.txt" :echo T :print T)
+;; Loading file p2LispRun.txt ...
+;; p2LispRun.txt 
+
+(insertNth '(X Y Z) 2 'FUN)
+(X Y FUN Z)
+
+(insertNth '(X Y Z) 4 'FUN)
+(X Y Z)
+
+
+(reverseTop '(X Y Z))
+(Z Y X)
+
+(reverseTop '(X (Y Z (A)) (W)))
+((W) (Y Z (A)) X)
+
+
+(reverseAll '(X Y Z))
+(Z Y X)
+
+(reverseAll '(X (Y Z (A)) (W)))
+((W) ((A) Z Y) X)
+
+
+(removeNILTop '(NIL X NIL NIL Y  NIL Z))
+(X Y Z)
+
+(removeNILTop '(X NIL Y NIL Z NIL))
+(X Y Z)
+
+(removeNILTop '(NIL (X NIL Y) (NIL NIL)))
+((X NIL Y) (NIL NIL))
+
+
+(removeNILMost '(NIL X NIL NIL Y  NIL Z))
+(X Y Z)
+
+(removeNILMost '(X NIL (Y NIL Z) NIL))
+(X (Y Z))
+
+(removeNILMost '(NIL (NIL) (X NIL Y) (NIL NIL) Z))
+(NIL (X Y) NIL Z)
+
+(removeNILMost '(NIL ( (((((NIL) NIL)))))))
+((((((NIL))))))
+
+
+(palindrome '(R A C E C A R))
+T
+
+(palindrome '(W A S I T A C A R O R A C A T I S A W))
+T
+
+(palindrome '(N I X O N))
+NIL
+
+
+(evalEach '( (setf A 5) (print 'hello) (print 'there) A))
+HELLO 
+THERE 
+5
+ 
+(evalEach '( (setf x 10 ) (setf A '(x y z)) (print A) (setf B (car A)) (set B (+ 5 x)) ))
+(X Y Z) 
+15
+
+(print B)
+X 
+X
+
+(print X)
+15 
+15
+
+

@@ -1,0 +1,7 @@
+First, the program needs to determine the number of files to be processed. 
+This can be done with the argc parameter of the main function; 
+Then, the argv parameter can be used to retrieve the name for each file.
+After that, fork() system call will be used to create multiple processes (one for each file). 
+For each child process, 
+it can simply invoke a function to count the number of words inside a specific file and print out the result like:
+Child process for File_x: number of words is XXX

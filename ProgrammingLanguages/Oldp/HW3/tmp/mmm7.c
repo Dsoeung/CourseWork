@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+
+#define SZ 87
+
+#define mmm7(ar, sz, t1, t2) \
+  t1 = 0; \
+  t2 = 0; \
+  for (int i = 0; i < sz; i++){ \
+   t1 += ar[i];  \
+   t2 += ar[i]*ar[i]; \
+  }\
+  }
+  
+int main(int argc, char *argv[]) {
+  int data[SZ];
+  int i;
+  int total1;
+  int total2;
+  for (i = 0; i < SZ; i++) data[i] = i % 10 + i / 10;
+  mmm7(data, SZ, total1, total2);
+  printf("Sum1=%d Sum2=%d\n", total1, total2);
+  // Check md5sum: 4432d1643d3e91b41dee8ed0620d5d07
+  return 0;
+}
