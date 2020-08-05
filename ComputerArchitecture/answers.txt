@@ -1,0 +1,26 @@
+~ Darin Soeung Iou957 ~
+
+1. Which lines of code correspond to the for loop of foo?
+Lines 16-24 corresponds to the loop comparing the value of i to the buffer size and checking if the loop should continue.
+Lines 12-15 corresponds to the action inside of the forloop setting B[i] = 5, and incrementing i.
+
+2. Which register is used to hold the variable i of foo?
+DWORD PTR [ebp-4] holds i, which we then send to the eax register.
+
+3. What is the memory address of the variable i of foo?
+[ebp-4]
+
+4. What is the beginning address of array B?
+[ebp-56+eax*4] with eax = i initially being 1 so, [ebp-56+4] = [ebp-60]
+
+5. What is the addressing mode for the constant BUF_SIZE when it is used as loop bound?
+Immediate addressing mode
+
+6. What is the addressing mode for the constant 5?
+Immediate addressing mode
+
+7. What is the addressing mode used to access each element of B in the loop?
+Indexed addressing mode
+
+8. What does the code on line 9 (“sub esp, 64”) do?
+Here we are making space (64 bytes) on the stack for the program to use and store variables.
